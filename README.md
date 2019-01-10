@@ -1,2 +1,5 @@
 # UCSanDiegoX-ALGS200x-Algorithmic-Design-and-Techniques
-Brush up knowledge about algorithms
+
+## Algorithms:
+- Greatest Common Divisors
+- Fibonacci Numbers
