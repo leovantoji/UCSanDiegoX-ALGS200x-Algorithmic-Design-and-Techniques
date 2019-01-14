@@ -1,6 +1,7 @@
 # UCSanDiegoX-ALGS200x-Algorithmic-Design-and-Techniques
 
-### Fibonacci Numbers
+## Programming Assignment 2
+### 1. Fibonacci Numbers
 Fibonacci sequence: *F<sub>0</sub> = 0*, *F<sub>1</sub> = 1*, and *F<sub>i</sub> = F<sub>i-1</sub> + F<sub>i-2</sub>* for *i >= 2*.
 
 **Task:** Given an integer *n*, find the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>*
@@ -26,7 +27,7 @@ def calc_fib(n):
   return fib[n]
 ```
 
-### Last Digit of a Large Fibonacci Number
+### 2. Last Digit of a Large Fibonacci Number
 **Task:** Given an integer *n*, find the last digit of the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>* (that is, *F<sub>n</sub>* `mod 10`)
 
 **Input Format:** The input consists of a single integer *n*
@@ -35,7 +36,19 @@ def calc_fib(n):
 
 **Output Format:** Output the last digit of *F<sub>n</sub>*
 
-### Greatest Common Divisors
+### 3. Greatest Common Divisors
+**Task:** Given two integers *a* and *b*, find their greatest common divisor
+
+**Input Format:** The two integers *a*, *b* are given in the same line separated by space
+
+**Constraints:** *1 ≤ a, b ≤ 2 x 10<sup>9</sup>*
+
+**Output Format:** Output *GDC(a,b)*
+
+### 4. Least Common Multiple
+### 5. Fibonacci Number Again
+### 6. Last Digit of the Sum of Fibonacci Numbers
+### 7. Last Digit of the Sum of Fibonacci Numbers Again
 
 - Big-O, Omega-O, Theta-O Notation
 - Greedy Algorithms:
