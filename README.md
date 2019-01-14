@@ -36,6 +36,21 @@ def calc_fib(n):
 
 **Output Format:** Output the last digit of *F<sub>n</sub>*
 
+```
+def get_fibonacci_last_digit_fast(n):
+ if n <= 1:
+  return n
+ 
+ last_digit = [0 for i in range(n+1)]
+ last_digit[0] = 0
+ last_digit[1] = 1
+ 
+ for i in range(2,(n+1)):
+  last_digit[i] = (last_digit[i-1] + last_digit[i-2]) % 10
+  
+ return last_digit[n]
+```
+
 ### 3. Greatest Common Divisors
 **Task:** Given two integers *a* and *b*, find their greatest common divisor
 
