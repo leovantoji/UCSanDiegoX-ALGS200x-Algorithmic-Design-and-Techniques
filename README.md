@@ -4,7 +4,9 @@
 Fibonacci sequence: *F<sub>0</sub> = 0*, *F<sub>1</sub> = 1*, and *F<sub>i</sub> = F<sub>i-1</sub> + F<sub>i-2</sub>* for *i >= 2*.
 
 **Task:** Given an integer *n*, find the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>*
+
 **Input Format:** The input consists of a single integer *n*
+
 **Constraints:** *0 <= n <= 45*
 
 **Output Format:** Output *F<sub>n</sub>*
@@ -23,6 +25,15 @@ def calc_fib(n):
   
   return fib[n]
 ```
+
+### Last Digit of a Large Fibonacci Number
+**Task:** Given an integer *n*, find the last digit of the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>* (that is, *F<sub>n</sub>* `mod 10`)
+
+**Input Format:** The input consists of a single integer *n*
+
+**Constraints:** *0 <= n <= 107*
+
+**Output Format:** Output the last digit of *F<sub>n</sub>*
 
 ### Greatest Common Divisors
 
