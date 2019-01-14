@@ -61,7 +61,14 @@ def get_fibonacci_last_digit_fast(n):
 **Output Format:** Output the greatest common divisor of *a* and *b*
 
 ```python
-
+def gcd_fast(a, b):
+    while min(a,b) != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
+     
+    return max(a,b)
 ```
 
 ### 4. Least Common Multiple
