@@ -1,7 +1,12 @@
 # UCSanDiegoX-ALGS200x-Algorithmic-Design-and-Techniques
 
 Fibonacci Numbers
-Recall the definition of Fibonacci sequence: $`F_0 = 0`$, $`𝐹_1 = 1`$, and $`𝐹_𝑖 = 𝐹_(𝑖−1) +𝐹_𝑖−2`$ for 
+Recall the definition of Fibonacci sequence: 
+```math
+F_0 = 0`$
+```
+
+$`𝐹_1 = 1`$, and $`𝐹_𝑖 = 𝐹_(𝑖−1) +𝐹_𝑖−2`$ for 
 $`𝑖 ≥ 2`$. Your goal in this problem is to implement an efficient algorithm for computing
 Fibonacci numbers.
 
