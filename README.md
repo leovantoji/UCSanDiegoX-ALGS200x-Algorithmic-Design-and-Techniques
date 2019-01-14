@@ -12,7 +12,7 @@ Fibonacci sequence: *F<sub>0</sub> = 0*, *F<sub>1</sub> = 1*, and *F<sub>i</sub>
 
 **Output Format:** Output *F<sub>n</sub>*
 
-```
+```python
 def calc_fib(n):
  if n <= 1:
   return n
@@ -36,7 +36,7 @@ def calc_fib(n):
 
 **Output Format:** Output the last digit of *F<sub>n</sub>*
 
-```
+```python
 def get_fibonacci_last_digit_fast(n):
  if n <= 1:
   return n
