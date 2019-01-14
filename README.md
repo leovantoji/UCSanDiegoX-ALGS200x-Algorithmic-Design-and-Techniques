@@ -5,7 +5,6 @@ Fibonacci sequence: *F<sub>0</sub> = 0*, *F<sub>1</sub> = 1*, and *F<sub>i</sub>
 
 **Task:** Given an integer *n*, find the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>*
 **Input Format:** The input consists of a single integer *n*
-
 **Constraints:** *0 <= n <= 45*
 
 **Output Format:** Output *F<sub>n</sub>*
