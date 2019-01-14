@@ -68,7 +68,7 @@ def calc_fib(n):
 
 **Input Format:** The input consists of a single integer *n*
 
-**Constraints:** *1 ≤ n ≤ 10<sup>14</sup>
+**Constraints:** *0 ≤ n ≤ 10<sup>14</sup>*
 
 **Output Format:** Output the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*
 
@@ -77,7 +77,7 @@ def calc_fib(n):
 
 **Input Format:** The two non-negative integers *m*, *n* are given in the same line separated by space
 
-**Constraints:** *0 ≤ m ≤ n ≤ 10<sup>18</sup>
+**Constraints:** *0 ≤ m ≤ n ≤ 10<sup>18</sup>*
 
 **Output Format:** Output the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*
 
