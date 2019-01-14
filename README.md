@@ -103,6 +103,45 @@ def lcm_fast(a, b):
 
 **Output Format:** Output *F<sub>n</sub>* `mod` *m*
 
+```python
+def fib(n):
+    if n <= 1:
+        return n
+    else:
+        f = [0 for i in range(n+1)]
+        f[0] = 0
+        f[1] = 1
+        
+        for i in range(2,n+1):
+            f[i] = f[i-1] + f[i-2]
+        
+        return f[n] 
+
+def pisano_period_len(m):
+    if m < 2:
+        return None
+    else:
+        fib_last_index = 3
+        fib_2nd_last = 1 #F(2) = 1
+        fib_last = 2 #F(3) = 2
+
+        while True:
+            if (fib_2nd_last % m == 0) and (fib_last % m == 1):
+                return (fib_last_index-1)
+            else:
+                temp = fib_2nd_last
+                fib_2nd_last = fib_last
+                fib_last += temp
+                fib_last_index += 1
+                
+def get_fibonacci_huge_fast(n, m):
+    if n <= 1:
+        return n
+    n %= pisano_period_len(m)
+    
+    return (fib(n) % m)
+```
+
 ### 6. Last Digit of the Sum of Fibonacci Numbers
 **Task:** Given an integer *n*, find the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*
 
