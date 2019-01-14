@@ -80,6 +80,20 @@ def gcd_fast(a, b):
 
 **Output Format:** Output the least common multiple of *a* and *b*
 
+```python
+def gcd(a,b):
+ while min(a,b) != 0:
+  if a > b:
+   a %= b
+  else:
+   b %= a
+ 
+ return max(a,b)
+
+def lcm_fast(a, b):
+ return int(a * b // gcd(a,b))
+```
+
 ### 5. Fibonacci Number Again
 **Task:** Given two integers *n* and *m*, output *F<sub>n</sub>* `mod` *m* (that is, the remainder of *F<sub>n</sub>* `mod` *m*)
 
