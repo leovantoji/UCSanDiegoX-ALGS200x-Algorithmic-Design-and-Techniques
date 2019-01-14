@@ -14,17 +14,17 @@ Fibonacci sequence: *F<sub>0</sub> = 0*, *F<sub>1</sub> = 1*, and *F<sub>i</sub>
 
 ```python
 def calc_fib(n):
- if n <= 1:
-  return n
- else:
-  fib = [0 for i in range(n+1)]
-  fib[0] = 0
-  fib[1] = 1
-  
-  for i in range(2,n+1):
-   fib[i] = fib[i-1] + fib[i-2]
-  
-  return fib[n]
+     if n <= 1:
+        return n
+     else:
+        fib = [0 for i in range(n+1)]
+        fib[0] = 0
+        fib[1] = 1
+
+        for i in range(2,n+1):
+        fib[i] = fib[i-1] + fib[i-2]
+
+        return fib[n]
 ```
 
 ### 2. Last Digit of a Large Fibonacci Number
@@ -38,17 +38,17 @@ def calc_fib(n):
 
 ```python
 def get_fibonacci_last_digit_fast(n):
- if n <= 1:
-  return n
- 
- last_digit = [0 for i in range(n+1)]
- last_digit[0] = 0
- last_digit[1] = 1
- 
- for i in range(2,(n+1)):
-  last_digit[i] = (last_digit[i-1] + last_digit[i-2]) % 10
-  
- return last_digit[n]
+    if n <= 1:
+        return n
+
+    last_digit = [0 for i in range(n+1)]
+    last_digit[0] = 0
+    last_digit[1] = 1
+
+    for i in range(2,(n+1)):
+        last_digit[i] = (last_digit[i-1] + last_digit[i-2]) % 10
+
+    return last_digit[n]
 ```
 
 ### 3. Greatest Common Divisors
@@ -61,14 +61,7 @@ def get_fibonacci_last_digit_fast(n):
 **Output Format:** Output the greatest common divisor of *a* and *b*
 
 ```python
-def gcd_fast(a, b):
- while min(a,b) != 0:
-  if a > b:
-   a %= b
-  else:
-   b %= a
- 
- return max(a,b)
+
 ```
 
 ### 4. Least Common Multiple
@@ -81,17 +74,17 @@ def gcd_fast(a, b):
 **Output Format:** Output the least common multiple of *a* and *b*
 
 ```python
-def gcd(a,b):
- while min(a,b) != 0:
-  if a > b:
-   a %= b
-  else:
-   b %= a
- 
- return max(a,b)
+def gcd_fast(a, b):
+    while min(a,b) != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
+     
+    return max(a,b)
 
 def lcm_fast(a, b):
- return int(a * b // gcd(a,b))
+    return int(a * b // gcd(a,b))
 ```
 
 ### 5. Fibonacci Number Again
