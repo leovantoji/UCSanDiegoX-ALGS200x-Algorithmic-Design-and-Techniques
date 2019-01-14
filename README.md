@@ -28,7 +28,7 @@ def calc_fib(n):
 ```
 
 ### 2. Last Digit of a Large Fibonacci Number
-**Task:** Given an integer *n*, find the last digit of the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>* (that is, *F<sub>n</sub>* `mod 10`)
+**Task:** Given an integer *n*, find the last digit of the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>* (that is, *F<sub>n</sub>* `mod` 10)
 
 **Input Format:** The input consists of a single integer *n*
 
@@ -43,10 +43,26 @@ def calc_fib(n):
 
 **Constraints:** *1 ≤ a, b ≤ 2 x 10<sup>9</sup>*
 
-**Output Format:** Output *GDC(a,b)*
+**Output Format:** Output the greatest common divisor of *a* and *b*
 
 ### 4. Least Common Multiple
+**Task:** Given two integers *a* and *b*, find their least common multiple
+
+**Input Format:** The two integers *a*, *b* are given in the same line separated by space
+
+**Constraints:** *1 ≤ a, b ≤ 2 x 10<sup>9</sup>*
+
+**Output Format:** Output the least common multiple of *a* and *b*
+
 ### 5. Fibonacci Number Again
+**Task:** Given two integers *n* and *m*, output *F<sub>n</sub>* `mod` *m* (that is, the remainder of *F<sub>n</sub>* `mod` *m*)
+
+**Input Format:** The two integers *n*, *m* are given in the same line separated by space
+
+**Constraints:** *1 ≤ n ≤ 10<sup>18</sup>, 2 ≤ m ≤ 10<sup>5</sup>*
+
+**Output Format:** Output *F<sub>n</sub>* `mod` *m*
+
 ### 6. Last Digit of the Sum of Fibonacci Numbers
 ### 7. Last Digit of the Sum of Fibonacci Numbers Again
 
