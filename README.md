@@ -189,10 +189,21 @@ def fibonacci_partial_sum(m, n):
 ```
 
 ### 3.3. Maximizing Revenue in Online Ad Placement
-**Task:** Given two sequences *a<sub>1</sub>, a<sub>2</sub>,..., a<sub>n</sub>* (*a<sub>i</sub>* is the profit per click of the *i<sup>th</sup>* ad) and *b<sub>1</sub>, b<sub>2</sub>,..., b<sub>n</sub>* (*b<sub>i</sub>* is the average number of clicks per day of the *i<sup>th</sup>* slot), we need to partition them into *n* pairs (*a<sub>i</sub>, b<sub>j</sub>*) such that the sum of their products is maximized.\
+**Task:** Given two sequences *a<sub>1</sub>, a<sub>2</sub> ... a<sub>n</sub>* (*a<sub>i</sub>* is the profit per click of the *i<sup>th</sup>* ad) and *b<sub>1</sub>, b<sub>2</sub> ... b<sub>n</sub>* (*b<sub>i</sub>* is the average number of clicks per day of the *i<sup>th</sup>* slot), we need to partition them into *n* pairs (*a<sub>i</sub>, b<sub>j</sub>*) such that the sum of their products is maximized.\
 **Input Format:** The first line contains an integer *n*. The second one contains a sequence of integers *a<sub>1</sub>, a<sub>2</sub> ... a<sub>n</sub>*. The third one contains a sequence of integers *b<sub>1</sub>, b<sub>2</sub> ... b<sub>n</sub>*.\
 **Constraints:** *0 ≤ n ≤ 10<sup>3</sup>, -10<sup>5</sup> ≤ a<sub>i</sub>, b<sub>i</sub> ≤ 10<sup>5</sup>* for all *1 ≤ i ≤ n*.\
-**Output Format:** Output the maximum value of *Σ︀a<sub>i</sub>c<sub>i</sub>*, where *c<sub>1</sub>, c<sub>2</sub> ... c<sub>n</sub>* is a permutation of *b<sub>1</sub>, b<sub>2</sub> ... b<sub>n</sub>*.
+**Output Format:** Output the maximum value of *Σ︀a<sub>i</sub>c<sub>i</sub>* where *c<sub>1</sub>, c<sub>2</sub> ... c<sub>n</sub>* is a permutation of *b<sub>1</sub>, b<sub>2</sub> ... b<sub>n</sub>*.
 
 ```python
 ```
+
+
+### 3.4. Collecting Signatures
+**Task:** Given a set of *n* of segments *{[a<sub>0</sub>, b<sub>0</sub>], [a<sub>1</sub>, b<sub>1</sub>] ... [a<sub>n-1</sub>, b<sub>n-1</sub>]}* with integer coordinates on a line, find the minimum number *m* of points such that each segment contains at least one point. That is, find a set of integers *X* of the minimum size such that for any segment *[a<sub>i</sub>, b<sub>i</sub>]* there is a point *x ∈ X* such that *a<sub>i</sub> ≤ x ≤ b<sub>i</sub>*.\
+**Input Format:** The first line contains the number *n* of segments. Each of the following *n* lines contains two integers *a<sub>i</sub>* and *b<sub>i</sub>* (separated by a space) defining the coordinates of endpoints of the *i<sup>th</sup>* segment.\
+**Constraints:** *0 ≤ n ≤ 100, 0 ≤ a<sub>i</sub> ≤ b<sub>i</sub> ≤ 10<sup>9</sup>* for all *0 ≤ i ≤ n*.\
+**Output Format:** Output the minimum number of *m* points on the first line and the integer coordinates of *m* points (separated by spaces) on the second line. You can output the points in any order. If there are many such sets of points, you can output any set. (It is not difficult to see that there always exists a set of points of the minimum size such that all the coordinates of the points are integers).
+
+```python
+```
+
