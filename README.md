@@ -207,3 +207,11 @@ def fibonacci_partial_sum(m, n):
 ```python
 ```
 
+### 3.6. Maximizing Your Salary
+**Task:** Compose the largest number out of a set of integers.\
+**Input Format:** The first line contains an integer *n*. The second one contains *n* integers *a<sub>1</sub>, a<sub>2</sub> ... a<sub>n</sub>*.\
+**Constraints:** *1 ≤ n ≤ 100, 1 ≤ a<sub>i</sub> ≤ 10<sup>3</sup>* for all *1 ≤ i ≤ n*.\
+**Output Format:** Output the largest number that can be composed out of *a<sub>1</sub>, a<sub>2</sub> ... a<sub>n</sub>*.
+
+```python
+```
