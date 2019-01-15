@@ -178,3 +178,12 @@ def fibonacci_partial_sum(m, n):
 
 ```python
 ```
+
+### 3.2. Maximizing the Value of a Loot
+**Task:** The goal of this code problem is to implement an algorithm for the fractional knapsack problem\
+**Input Format:** The first line of the input contains the number of *n* items and the capacity *W* of a knapsack. The next *n* lines define the values and weights of the items. The *i<sup>th</sup>* line contains integers *v<sub>i</sub>* and *w<sub>i</sub>* - the value and the weight of the *i<sup>th</sup>* item respectively\
+**Constraints:** *0 ≤ n ≤ 10<sup>3</sup>, 0 ≤ W ≤ 2 x 10<sup>6</sup>, 0 ≤ v<sub>i</sub> ≤ 2 x 10<sup>6</sup>, 0 ≤ w<sub>i</sub> ≤ 2 x 10<sup>6</sup>* for all *0 ≤ i ≤ n.* All the numbers are integers\
+**Output Format:** Output the maximal value of fractions of items that fit into the knapsack. The absolute value of the difference between the answer of your program and the optimal value should be at most *10<sup>-3</sup>*. To ensure this, out put your answer with at least four digits after the decimal points. Otherwise, your answer, while being computed correctly, can turn out to be wrong because of rounding issues.
+
+```python
+```
