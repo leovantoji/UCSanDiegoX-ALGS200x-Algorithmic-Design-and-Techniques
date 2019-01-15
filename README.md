@@ -154,7 +154,7 @@ def fibonacci_sum(n):
 	last_digit = ((divisor % 10) * last_digit_of_sum(pisano_len)) % 10
 
 	for i in range(n-remainder,n+1):
-		last_digit += get_fibonacci_huge_fast(i, 10)
+		last_digit += get_fibonacci_huge(i, 10)
 		last_digit %= 10
 	
 	return last_digit
@@ -168,6 +168,20 @@ def fibonacci_sum(n):
 **Constraints:** *0 ≤ m ≤ n ≤ 10<sup>18</sup>*
 
 **Output Format:** Output the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*
+
+```python
+def fibonacci_partial_sum(m, n):
+	last_digit_sum_fn = fibonacci_sum(n)
+	if m <= 1:
+		return last_digit_sum_fn
+	
+	last_digit_sum_fm_1 = fibonacci_sum(m-1)
+	
+	if last_digit_sum_fn < last_digit_sum_fm_1:
+		last_digit_sum_fn += 10
+	
+	return (last_digit_sum_fn - last_digit_sum_fm_1)
+```
 
 - Big-O, Omega-O, Theta-O Notation
 - Greedy Algorithms:
