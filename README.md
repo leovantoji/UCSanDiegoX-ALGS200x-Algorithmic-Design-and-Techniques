@@ -119,34 +119,34 @@ def get_fibonacci_huge(n, m):
 
 ```python
 def last_digit_of_sum(pisano_len):
-	if pisano_len <= 1:
-		return n
+    if pisano_len <= 1:
+        return n
 
-	last_digit = [0 for i in range(pisano_len)]
-	last_digit[0] = 0
-	last_digit[1] = 1
-	
-	for i in range(2,pisano_len):
-		last_digit[i] = (last_digit[i-1] + last_digit[i-2] + 1) % 10
+    last_digit = [0 for i in range(pisano_len)]
+    last_digit[0] = 0
+    last_digit[1] = 1
 
-	return last_digit[pisano_len-1]
+    for i in range(2,pisano_len):
+        last_digit[i] = (last_digit[i-1] + last_digit[i-2] + 1) % 10
+
+    return last_digit[pisano_len-1]
 
 def fibonacci_sum(n):
-	if n <= 1:
-		return n
+    if n <= 1:
+        return n
 
-	# n = pisano_len * divisor + remainder
-	pisano_len = pisano_period_len(10)
-	divisor = n // pisano_len
-	remainder = n % pisano_len
+    # n = pisano_len * divisor + remainder
+    pisano_len = pisano_period_len(10)
+    divisor = n // pisano_len
+    remainder = n % pisano_len
 
-	last_digit = ((divisor % 10) * last_digit_of_sum(pisano_len)) % 10
+    last_digit = ((divisor % 10) * last_digit_of_sum(pisano_len)) % 10
 
-	for i in range(n-remainder,n+1):
-		last_digit += get_fibonacci_huge(i, 10)
-		last_digit %= 10
-	
-	return last_digit
+    for i in range(n-remainder,n+1):
+        last_digit += get_fibonacci_huge(i, 10)
+        last_digit %= 10
+
+    return last_digit
 ```
 
 ### 2.7. Last Digit of the Sum of Fibonacci Numbers Again
@@ -157,16 +157,16 @@ def fibonacci_sum(n):
 
 ```python
 def fibonacci_partial_sum(m, n):
-	last_digit_sum_fn = fibonacci_sum(n)
-	if m <= 1:
-		return last_digit_sum_fn
-	
-	last_digit_sum_fm_1 = fibonacci_sum(m-1)
-	
-	if last_digit_sum_fn < last_digit_sum_fm_1:
-		last_digit_sum_fn += 10
-	
-	return (last_digit_sum_fn - last_digit_sum_fm_1)
+    last_digit_sum_fn = fibonacci_sum(n)
+    if m <= 1:
+        return last_digit_sum_fn
+
+    last_digit_sum_fm_1 = fibonacci_sum(m-1)
+
+    if last_digit_sum_fn < last_digit_sum_fm_1:
+        last_digit_sum_fn += 10
+
+    return (last_digit_sum_fn - last_digit_sum_fm_1)
 ```
 
 ## Programming Assignment 3: Greedy Algorithms
@@ -178,22 +178,22 @@ def fibonacci_partial_sum(m, n):
 
 ```python
 def get_change(m):
-	coins = 0
-	
-	while m > 0:
-		if m >= 10:
-			additional_coins = m % 10
-			coins += additional_coints
-			m -= additional_coints * 10
-		elif m >= 5:
-			additional_coins = m % 5
-			coins += additional_coints
-			m -= additional_coints * 5
-		else:
-			coins += m
-			m = 0
-	
-	return coins
+    coins = 0
+
+    while m > 0:
+        if m >= 10:
+            additional_coins = m // 10
+            coins += additional_coins
+            m -= additional_coins * 10
+        elif m >= 5:
+            additional_coins = m // 5
+            coins += additional_coins
+            m -= additional_coins * 5
+        else:
+            coins += m
+            m = 0
+
+    return coins
 ```
 
 ### 3.2. Maximizing the Value of a Loot
