@@ -11,10 +11,10 @@
 ## Programming Assignment 2: Algorithmic Warmup
 ### 2.1. Fibonacci Numbers
 Fibonacci sequence: *F<sub>0</sub> = 0*, *F<sub>1</sub> = 1*, and *F<sub>i</sub> = F<sub>i-1</sub> + F<sub>i-2</sub>* for *i ≥ 2*.\
-**Task:** Given an integer *n*, find the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>*\
-**Input Format:** The input consists of a single integer *n*\
-**Constraints:** *0 ≤ n ≤ 45*\
-**Output Format:** Output *F<sub>n</sub>*
+**Task:** Given an integer *n*, find the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>*.\
+**Input Format:** The input consists of a single integer *n*.\
+**Constraints:** *0 ≤ n ≤ 45*.\
+**Output Format:** Output *F<sub>n</sub>.*
 
 ```python
 def fib(n):
@@ -32,10 +32,10 @@ def fib(n):
 ```
 
 ### 2.2. Last Digit of a Large Fibonacci Number
-**Task:** Given an integer *n*, find the last digit of the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>* (that is, *F<sub>n</sub>* `mod` 10)\
-**Input Format:** The input consists of a single integer *n*\
-**Constraints:** *0 ≤ n ≤ 107*\
-**Output Format:** Output the last digit of *F<sub>n</sub>*
+**Task:** Given an integer *n*, find the last digit of the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>* (that is, *F<sub>n</sub>* `mod` 10).\
+**Input Format:** The input consists of a single integer *n*.\
+**Constraints:** *0 ≤ n ≤ 107*.\
+**Output Format:** Output the last digit of *F<sub>n</sub>.*
 
 ```python
 def get_fibonacci_last_digit(n):
@@ -53,10 +53,10 @@ def get_fibonacci_last_digit(n):
 ```
 
 ### 2.3. Greatest Common Divisors
-**Task:** Given two integers *a* and *b*, find their greatest common divisor\
-**Input Format:** The two integers *a*, *b* are given in the same line separated by space\
-**Constraints:** *1 ≤ a, b ≤ 2 x 10<sup>9</sup>*\
-**Output Format:** Output the greatest common divisor of *a* and *b*
+**Task:** Given two integers *a* and *b*, find their greatest common divisor.\
+**Input Format:** The two integers *a*, *b* are given in the same line separated by space.\
+**Constraints:** *1 ≤ a, b ≤ 2 x 10<sup>9</sup>*.\
+**Output Format:** Output the greatest common divisor of *a* and *b*.
 
 ```python
 def gcd(a, b):
@@ -70,10 +70,10 @@ def gcd(a, b):
 ```
 
 ### 2.4. Least Common Multiple
-**Task:** Given two integers *a* and *b*, find their least common multiple\
-**Input Format:** The two integers *a*, *b* are given in the same line separated by space\
-**Constraints:** *1 ≤ a, b ≤ 2 x 10<sup>9</sup>*\
-**Output Format:** Output the least common multiple of *a* and *b*
+**Task:** Given two integers *a* and *b*, find their least common multiple.\
+**Input Format:** The two integers *a*, *b* are given in the same line separated by space.\
+**Constraints:** *1 ≤ a, b ≤ 2 x 10<sup>9</sup>*.\
+**Output Format:** Output the least common multiple of *a* and *b*.
 
 ```python
 def lcm(a, b):
@@ -81,10 +81,10 @@ def lcm(a, b):
 ```
 
 ### 2.5. Fibonacci Number Again
-**Task:** Given two integers *n* and *m*, output *F<sub>n</sub>* `mod` *m* (that is, the remainder of *F<sub>n</sub>* `mod` *m*)\
-**Input Format:** The two integers *n*, *m* are given in the same line separated by space\
-**Constraints:** *1 ≤ n ≤ 10<sup>18</sup>, 2 ≤ m ≤ 10<sup>5</sup>*\
-**Output Format:** Output *F<sub>n</sub>* `mod` *m*
+**Task:** Given two integers *n* and *m*, output *F<sub>n</sub>* `mod` *m* (that is, the remainder of *F<sub>n</sub>* `mod` *m*).\
+**Input Format:** The two integers *n*, *m* are given in the same line separated by space.\
+**Constraints:** *1 ≤ n ≤ 10<sup>18</sup>, 2 ≤ m ≤ 10<sup>5</sup>*.\
+**Output Format:** Output *F<sub>n</sub>* `mod` *m*.
 
 ```python
 def pisano_period_len(m):
@@ -112,10 +112,10 @@ def get_fibonacci_huge(n, m):
 ```
 
 ### 2.6. Last Digit of the Sum of Fibonacci Numbers
-**Task:** Given an integer *n*, find the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*\
-**Input Format:** The input consists of a single integer *n*\
-**Constraints:** *0 ≤ n ≤ 10<sup>14</sup>*\
-**Output Format:** Output the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*
+**Task:** Given an integer *n*, find the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*.\
+**Input Format:** The input consists of a single integer *n*.\
+**Constraints:** *0 ≤ n ≤ 10<sup>14</sup>*.\
+**Output Format:** Output the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>.*
 
 ```python
 def last_digit_of_sum(pisano_len):
@@ -150,10 +150,10 @@ def fibonacci_sum(n):
 ```
 
 ### 2.7. Last Digit of the Sum of Fibonacci Numbers Again
-**Task:** Given two non-negative integers *m* and *n*, where *m ≤ n*, find the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*\
-**Input Format:** The two non-negative integers *m*, *n* are given in the same line separated by space\
-**Constraints:** *0 ≤ m ≤ n ≤ 10<sup>18</sup>*\
-**Output Format:** Output the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*
+**Task:** Given two non-negative integers *m* and *n*, where *m ≤ n*, find the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*.\
+**Input Format:** The two non-negative integers *m*, *n* are given in the same line separated by space.\
+**Constraints:** *0 ≤ m ≤ n ≤ 10<sup>18</sup>*.\
+**Output Format:** Output the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*.
 
 ```python
 def fibonacci_partial_sum(m, n):
@@ -171,18 +171,18 @@ def fibonacci_partial_sum(m, n):
 
 ## Programming Assignment 3: Greedy Algorithms
 ### 3.1. Changing Money
-**Task:** The goal in this problem is to find the minimum number of coins needed to change the input value (an integer) into coins with denominations 1, 5, and 10 cents\
-**Input Format:** The input consists of a single integer *m*\
-**Constraints:** *0 ≤ m ≤ 10<sup>3</sup>*\
-**Output Format:** Output the minimum number of coins with denominations 1, 5, 10 that changes *m*
+**Task:** The goal in this problem is to find the minimum number of coins needed to change the input value (an integer) into coins with denominations 1, 5, and 10 cents.\
+**Input Format:** The input consists of a single integer *m*.\
+**Constraints:** *0 ≤ m ≤ 10<sup>3</sup>*.\
+**Output Format:** Output the minimum number of coins with denominations 1, 5, 10 that changes *m*.
 
 ```python
 ```
 
 ### 3.2. Maximizing the Value of a Loot
-**Task:** The goal of this code problem is to implement an algorithm for the fractional knapsack problem\
-**Input Format:** The first line of the input contains the number of *n* items and the capacity *W* of a knapsack. The next *n* lines define the values and weights of the items. The *i<sup>th</sup>* line contains integers *v<sub>i</sub>* and *w<sub>i</sub>* - the value and the weight of the *i<sup>th</sup>* item respectively\
-**Constraints:** *0 ≤ n ≤ 10<sup>3</sup>, 0 ≤ W ≤ 2 x 10<sup>6</sup>, 0 ≤ v<sub>i</sub> ≤ 2 x 10<sup>6</sup>, 0 ≤ w<sub>i</sub> ≤ 2 x 10<sup>6</sup>* for all *0 ≤ i ≤ n.* All the numbers are integers\
+**Task:** The goal of this code problem is to implement an algorithm for the fractional knapsack problem.\
+**Input Format:** The first line of the input contains the number of *n* items and the capacity *W* of a knapsack. The next *n* lines define the values and weights of the items. The *i<sup>th</sup>* line contains integers *v<sub>i</sub>* and *w<sub>i</sub>* - the value and the weight of the *i<sup>th</sup>* item respectively.\
+**Constraints:** *0 ≤ n ≤ 10<sup>3</sup>, 0 ≤ W ≤ 2 x 10<sup>6</sup>, 0 ≤ v<sub>i</sub> ≤ 2 x 10<sup>6</sup>, 0 ≤ w<sub>i</sub> ≤ 2 x 10<sup>6</sup>* for all *0 ≤ i ≤ n.* All the numbers are integers.\
 **Output Format:** Output the maximal value of fractions of items that fit into the knapsack. The absolute value of the difference between the answer of your program and the optimal value should be at most *10<sup>-3</sup>*. To ensure this, out put your answer with at least four digits after the decimal points. Otherwise, your answer, while being computed correctly, can turn out to be wrong because of rounding issues.
 
 ```python
