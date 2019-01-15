@@ -203,6 +203,39 @@ def get_change(m):
 **Output Format:** Output the maximal value of fractions of items that fit into the knapsack. The absolute value of the difference between the answer of your program and the optimal value should be at most *10<sup>-3</sup>*. To ensure this, out put your answer with at least four digits after the decimal points. Otherwise, your answer, while being computed correctly, can turn out to be wrong because of rounding issues.
 
 ```python
+def get_optimal_value(capacity, weights, values):
+    value = 0
+    #calculate the value per weight unit
+    vpw = [v/w for w, v in list(zip(weights, values))]
+    
+    items = list(zip(vpw, weights, values))
+    #sort items in descending order of value per weight unit
+    items.sort(reverse = True)
+    
+    #append items back to list in descending order of value per weight unit
+    vpw = []
+    weights = []
+    values = []
+    
+    for i in range(len(items)):
+        vpw.append(items[i][0])
+        weights.append(items[i][1])
+        values.append(items[i][2])
+    
+    #add fractions of items with highest value per weight unit until the knapsack is filled
+    #start with the highest value per weight unit item
+    i = 0
+    
+    while capacity > 0 and i < len(items):
+        if capacity < weights[i]:
+            value += capacity * vpw[i]
+            capacity = 0
+        else:
+            value += values[i]
+            capacity -= weights[i]
+            i += 1
+    
+    return value
 ```
 
 ### 3.3. Maximizing Revenue in Online Ad Placement
