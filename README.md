@@ -190,9 +190,9 @@ def fibonacci_partial_sum(m, n):
 
 ### 3.3. Maximizing Revenue in Online Ad Placement
 **Task:** Given two sequences *a<sub>1</sub>, a<sub>2</sub>,..., a<sub>n</sub>* (*a<sub>i</sub>* is the profit per click of the *i<sup>th</sup>* ad) and *b<sub>1</sub>, b<sub>2</sub>,..., b<sub>n</sub>* (*b<sub>i</sub>* is the average number of clicks per day of the *i<sup>th</sup>* slot), we need to partition them into *n* pairs (*a<sub>i</sub>, b<sub>j</sub>*) such that the sum of their products is maximized.\
-**Input Format:** The first line contains an integer *n*. The second one contains a sequence of integers *a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>*. The third one contains a sequence of integers *b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>n</sub>*.\
+**Input Format:** The first line contains an integer *n*. The second one contains a sequence of integers *a<sub>1</sub>, a<sub>2</sub>, ... a<sub>n</sub>*. The third one contains a sequence of integers *b<sub>1</sub>, b<sub>2</sub>, ... b<sub>n</sub>*.\
 **Constraints:** *0 ≤ n ≤ 10<sup>3</sup>, -10<sup>5</sup> ≤ a<sub>i</sub>, b<sub>i</sub> ≤ 10<sup>5</sup>* for all *1 ≤ i ≤ n*.\
-**Output Format:** Output the maximum value of *Σ︀ a<sub>i</sub>, c<sub>i</sub>*, where *c<sub>1</sub>, c<sub>2</sub>, ..., c<sub>n</sub>* is a permutation of *b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>n</sub>*.
+**Output Format:** Output the maximum value of *Σ︀ a<sub>i</sub>c<sub>i</sub>*, where *c<sub>1</sub>, c<sub>2</sub>, ... c<sub>n</sub>* is a permutation of *b<sub>1</sub>, b<sub>2</sub>, ... b<sub>n</sub>*.
 
 ```python
 ```
