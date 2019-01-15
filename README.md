@@ -177,6 +177,23 @@ def fibonacci_partial_sum(m, n):
 **Output Format:** Output the minimum number of coins with denominations 1, 5, 10 that changes *m*.
 
 ```python
+def get_change(m):
+	coins = 0
+	
+	while m > 0:
+		if m >= 10:
+			additional_coins = m % 10
+			coins += additional_coints
+			m -= additional_coints * 10
+		elif m >= 5:
+			additional_coins = m % 5
+			coins += additional_coints
+			m -= additional_coints * 5
+		else:
+			coins += m
+			m = 0
+	
+	return coins
 ```
 
 ### 3.2. Maximizing the Value of a Loot
