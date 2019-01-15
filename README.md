@@ -37,7 +37,7 @@ def fib(n):
 **Output Format:** Output the last digit of *F<sub>n</sub>*
 
 ```python
-def get_fibonacci_last_digit_fast(n):
+def get_fibonacci_last_digit(n):
     if n <= 1:
         return n
 
@@ -61,7 +61,7 @@ def get_fibonacci_last_digit_fast(n):
 **Output Format:** Output the greatest common divisor of *a* and *b*
 
 ```python
-def gcd_fast(a, b):
+def gcd(a, b):
     while min(a,b) != 0:
         if a > b:
             a %= b
@@ -81,7 +81,7 @@ def gcd_fast(a, b):
 **Output Format:** Output the least common multiple of *a* and *b*
 
 ```python
-def lcm_fast(a, b):
+def lcm(a, b):
     return int(a * b // gcd(a,b))
 ```
 
@@ -112,7 +112,7 @@ def pisano_period_len(m):
                 fib_last += temp
                 fib_last_index += 1
                 
-def get_fibonacci_huge_fast(n, m):
+def get_fibonacci_huge(n, m):
     if n <= 1:
         return n
     n %= pisano_period_len(m)
@@ -142,7 +142,7 @@ def last_digit_of_sum(pisano_len):
 
 	return last_digit[pisano_len-1]
 
-def fibonacci_sum_fast(n):
+def fibonacci_sum(n):
 	if n <= 1:
 		return n
 
