@@ -151,6 +151,75 @@ def get_fibonacci_huge_fast(n, m):
 
 **Output Format:** Output the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*
 
+```python
+def fib(n):
+    if n <= 1:
+        return n
+    else:
+        f = [0 for i in range(n+1)]
+        f[0] = 0
+        f[1] = 1
+        
+        for i in range(2,n+1):
+            f[i] = f[i-1] + f[i-2]
+        
+        return f[n]
+
+def pisano_period_len(m):
+    if m < 2:
+        return None
+    else:
+        fib_last_index = 3
+        fib_2nd_last = 1 #F(2) = 1
+        fib_last = 2 #F(3) = 2
+
+        while True:
+            if (fib_2nd_last % m == 0) and (fib_last % m == 1):
+                return (fib_last_index-1)
+            else:
+                temp = fib_2nd_last
+                fib_2nd_last = fib_last
+                fib_last += temp
+                fib_last_index += 1
+                
+def get_fibonacci_huge_fast(n, m):
+    if n <= 1:
+        return n
+    n %= pisano_period_len(m)
+    
+    return (fib(n) % m)
+
+def last_digit_of_sum(pisano_len):
+	if pisano_len <= 1:
+		return n
+
+	last_digit = [0 for i in range(pisano_len)]
+	last_digit[0] = 0
+	last_digit[1] = 1
+	
+	for i in range(2,pisano_len):
+		last_digit[i] = (last_digit[i-1] + last_digit[i-2] + 1) % 10
+
+	return last_digit[pisano_len-1]
+
+def fibonacci_sum_fast(n):
+	if n <= 1:
+		return n
+
+	# n = pisano_len * divisor + remainder
+	pisano_len = pisano_period_len(10)
+	divisor = n // pisano_len
+	remainder = n % pisano_len
+
+	last_digit = ((divisor % 10) * last_digit_of_sum(pisano_len)) % 10
+
+	for i in range(n-remainder,n+1):
+		last_digit += get_fibonacci_huge_fast(i, 10)
+		last_digit %= 10
+
+	return last_digit
+```
+
 ### 7. Last Digit of the Sum of Fibonacci Numbers Again
 **Task:** Given two non-negative integers *m* and *n*, where *m ≤ n*, find the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*
 
