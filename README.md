@@ -197,7 +197,6 @@ def fibonacci_partial_sum(m, n):
 ```python
 ```
 
-
 ### 3.4. Collecting Signatures
 **Task:** Given a set of *n* of segments *{[a<sub>0</sub>, b<sub>0</sub>], [a<sub>1</sub>, b<sub>1</sub>] ... [a<sub>n-1</sub>, b<sub>n-1</sub>]}* with integer coordinates on a line, find the minimum number *m* of points such that each segment contains at least one point. That is, find a set of integers *X* of the minimum size such that for any segment *[a<sub>i</sub>, b<sub>i</sub>]* there is a point *x ∈ X* such that *a<sub>i</sub> ≤ x ≤ b<sub>i</sub>*.\
 **Input Format:** The first line contains the number *n* of segments. Each of the following *n* lines contains two integers *a<sub>i</sub>* and *b<sub>i</sub>* (separated by a space) defining the coordinates of endpoints of the *i<sup>th</sup>* segment.\
@@ -207,7 +206,16 @@ def fibonacci_partial_sum(m, n):
 ```python
 ```
 
-### 3.6. Maximizing Your Salary
+### 3.5. Maximizing the Number of Prize Places in a Competition
+**Task:** The goal of this problem is to represent a given positive integer *n* as a sum of as many pairwise distinct positive integers as possible. That is, to find the maximum *k* such that *n* can be written as *a<sub>1</sub> + a<sub>2</sub> + ... + a<sub>k</sub>* where *a<sub>1</sub>, a<sub>2</sub> ... a<sub>k</sub>* are positive integers and *a<sub>i</sub> != a<sub>j</sub>* for all *1 ≤ i < j ≤ k*.\
+**Input Format:** The input contains a single integer *n*.\
+**Constraints:** *1 ≤ n ≤ 10<sup>9</sup>*.\
+**Output Format:** In the first line, output the maximum number *k* such that *n* can be represented as a sum of *k* pairwise distinct positive integers. In the second line, output *k* pairwise distinct positive integers that sum up to *n* (if there are many such representations, output any of them).
+
+```python
+```
+
+### 3.6. Maximizing Your Salary 
 **Task:** Compose the largest number out of a set of integers.\
 **Input Format:** The first line contains an integer *n*. The second one contains *n* integers *a<sub>1</sub>, a<sub>2</sub> ... a<sub>n</sub>*.\
 **Constraints:** *1 ≤ n ≤ 100, 1 ≤ a<sub>i</sub> ≤ 10<sup>3</sup>* for all *1 ≤ i ≤ n*.\
