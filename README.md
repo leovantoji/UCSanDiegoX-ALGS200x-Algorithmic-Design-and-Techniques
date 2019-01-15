@@ -1,8 +1,16 @@
 # UCSanDiegoX-ALGS200x-Algorithmic-Design-and-Techniques
 
-## Programming Assignment 2
-### 1. Fibonacci Numbers
-Fibonacci sequence: *F<sub>0</sub> = 0*, *F<sub>1</sub> = 1*, and *F<sub>i</sub> = F<sub>i-1</sub> + F<sub>i-2</sub>* for *2 ≤ i*.
+## Course Summary
+- Big-O, Omega-O, Theta-O Notation
+- Greedy Algorithms:
+  - A choice is called safe when there's an optimal solution consistent with this first choice
+  - Not all first choices are safe
+  - Greedy choices are often unsafe
+- Divide and Conquer
+
+## Programming Assignment 2: Algorithmic Warmup
+### 2.1. Fibonacci Numbers
+Fibonacci sequence: *F<sub>0</sub> = 0*, *F<sub>1</sub> = 1*, and *F<sub>i</sub> = F<sub>i-1</sub> + F<sub>i-2</sub>* for *i ≥ 2*.
 
 **Task:** Given an integer *n*, find the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>*
 
@@ -27,7 +35,7 @@ def fib(n):
         return fib[n]
 ```
 
-### 2. Last Digit of a Large Fibonacci Number
+### 2.2. Last Digit of a Large Fibonacci Number
 **Task:** Given an integer *n*, find the last digit of the *n<sup>th</sup>* Fibonacci number *F<sub>n</sub>* (that is, *F<sub>n</sub>* `mod` 10)
 
 **Input Format:** The input consists of a single integer *n*
@@ -51,7 +59,7 @@ def get_fibonacci_last_digit(n):
     return last_digit[n]
 ```
 
-### 3. Greatest Common Divisors
+### 2.3. Greatest Common Divisors
 **Task:** Given two integers *a* and *b*, find their greatest common divisor
 
 **Input Format:** The two integers *a*, *b* are given in the same line separated by space
@@ -71,7 +79,7 @@ def gcd(a, b):
     return max(a,b)
 ```
 
-### 4. Least Common Multiple
+### 2.4. Least Common Multiple
 **Task:** Given two integers *a* and *b*, find their least common multiple
 
 **Input Format:** The two integers *a*, *b* are given in the same line separated by space
@@ -85,7 +93,7 @@ def lcm(a, b):
     return int(a * b // gcd(a,b))
 ```
 
-### 5. Fibonacci Number Again
+### 2.5. Fibonacci Number Again
 **Task:** Given two integers *n* and *m*, output *F<sub>n</sub>* `mod` *m* (that is, the remainder of *F<sub>n</sub>* `mod` *m*)
 
 **Input Format:** The two integers *n*, *m* are given in the same line separated by space
@@ -119,7 +127,7 @@ def get_fibonacci_huge(n, m):
     return (fib(n) % m)
 ```
 
-### 6. Last Digit of the Sum of Fibonacci Numbers
+### 2.6. Last Digit of the Sum of Fibonacci Numbers
 **Task:** Given an integer *n*, find the last digit of the sum *F<sub>0</sub> + F<sub>1</sub> + ... + F<sub>n</sub>*
 
 **Input Format:** The input consists of a single integer *n*
@@ -160,7 +168,7 @@ def fibonacci_sum(n):
 	return last_digit
 ```
 
-### 7. Last Digit of the Sum of Fibonacci Numbers Again
+### 2.7. Last Digit of the Sum of Fibonacci Numbers Again
 **Task:** Given two non-negative integers *m* and *n*, where *m ≤ n*, find the last digit of the sum *F<sub>m</sub> + F<sub>m+1</sub> + ... + F<sub>n</sub>*
 
 **Input Format:** The two non-negative integers *m*, *n* are given in the same line separated by space
@@ -183,9 +191,10 @@ def fibonacci_partial_sum(m, n):
 	return (last_digit_sum_fn - last_digit_sum_fm_1)
 ```
 
-- Big-O, Omega-O, Theta-O Notation
-- Greedy Algorithms:
-  - A choice is called safe when there's an optimal solution consistent with this first choice
-  - Not all first choices are safe
-  - Greedy choices are often unsafe
-- Divide and Conquer
+## Programming Assignment 3: Greedy Algorithms
+### 3.1. Changing Money
+**Task:** The goal in this problem is to find the minimum number of coins needed to change the input value (an integer) into coins with denominations 1, 5, and 10 cents
+**Input Format:** The input consists of a single integer *m*
+**Constraints:** *0 ≤ m ≤ 10<sup>3</sup>*
+**Output Format:** Output the minimum number of coins with denominations 1, 5, 10 that changes *m*
+
