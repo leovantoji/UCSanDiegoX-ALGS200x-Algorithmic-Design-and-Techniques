@@ -156,6 +156,7 @@ def fibonacci_sum(n):
 	for i in range(n-remainder,n+1):
 		last_digit += get_fibonacci_huge_fast(i, 10)
 		last_digit %= 10
+	
 	return last_digit
 ```
 
