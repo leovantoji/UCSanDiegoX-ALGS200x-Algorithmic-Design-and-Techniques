@@ -245,6 +245,21 @@ def get_optimal_value(capacity, weights, values):
 **Output Format:** Output the maximum value of *Σ︀a<sub>i</sub>c<sub>i</sub>* where *c<sub>1</sub>, c<sub>2</sub> ... c<sub>n</sub>* is a permutation of *b<sub>1</sub>, b<sub>2</sub> ... b<sub>n</sub>*.
 
 ```python
+'''
+leaveraging built-in sort() method
+'''
+def max_dot_product(a, b):
+	res = 0
+	a.sort()
+	b.sort()
+	for i in range(len(a)):
+		res += a[i] * b[i]
+	return res
+  
+'''
+without using sort() method
+'''
+
 ```
 
 ### 3.4. Collecting Signatures
