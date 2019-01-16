@@ -247,37 +247,37 @@ def get_optimal_value(capacity, weights, values):
 ```python
 # leveraging built-in sort() method
 def max_dot_product(a, b):
-	res = 0
-	a.sort()
-	b.sort()
-	for i in range(len(a)):
-		res += a[i] * b[i]
-	return res
-  
+    res = 0
+    a.sort()
+    b.sort()
+    for i in range(len(a)):
+        res += a[i] * b[i]
+    return res
+
 # without sort() method
 import math
 
 def find_max(a):
-	max = -math.inf
-	max_index = 0
-	for i in range(len(a)):
-		if a[i] > max:
-			max = a[i]
-			max_index = i
-	
-	return max_index
+    max_value = -math.inf
+    max_index = 0
+    for i in range(len(a)):
+        if a[i] > max_value:
+            max_value = a[i]
+            max_index = i
+
+    return max_index
 
 def max_dot_product(a, b):
-	res = 0
+    res = 0
 
-	while len(a) > 0:
-		max_a = find_max(a)
-		max_b = find_max(b)
-		res += a[max_a] * b[max_b]
-		a.pop(max_a)
-		b.pop(max_b)
-		
-	return res
+    while len(a) > 0:
+        max_a = find_max(a)
+        max_b = find_max(b)
+        res += a[max_a] * b[max_b]
+        a.pop(max_a)
+        b.pop(max_b)
+
+    return res
 ```
 
 ### 3.4. Collecting Signatures
@@ -287,6 +287,7 @@ def max_dot_product(a, b):
 **Output Format:** Output the minimum number of *m* points on the first line and the integer coordinates of *m* points (separated by spaces) on the second line. You can output the points in any order. If there are many such sets of points, you can output any set. (It is not difficult to see that there always exists a set of points of the minimum size such that all the coordinates of the points are integers).
 
 ```python
+
 ```
 
 ### 3.5. Maximizing the Number of Prize Places in a Competition
