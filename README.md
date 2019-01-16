@@ -246,7 +246,7 @@ def get_optimal_value(capacity, weights, values):
 
 ```python
 '''
-leaveraging built-in sort() method
+leveraging built-in sort() method
 '''
 def max_dot_product(a, b):
 	res = 0
@@ -257,7 +257,7 @@ def max_dot_product(a, b):
 	return res
   
 '''
-without using sort() method
+without sort() method
 '''
 
 ```
