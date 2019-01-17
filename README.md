@@ -287,7 +287,30 @@ def max_dot_product(a, b):
 **Output Format:** Output the minimum number of *m* points on the first line and the integer coordinates of *m* points (separated by spaces) on the second line. You can output the points in any order. If there are many such sets of points, you can output any set. (It is not difficult to see that there always exists a set of points of the minimum size such that all the coordinates of the points are integers).
 
 ```python
+import math
 
+def find_best_point(segments):
+	best_point = -math.inf
+	
+	for s in segments:
+		if s.start > best_point:
+			best_point = s.start
+	
+	checked_segments = [s for s in segments if (best_point >= s.start and best_point <= s.end)]
+	
+	for s in checked_segments:
+		segments.remove(s)
+			
+	return best_point, segments
+
+def optimal_points(segments):
+	points = []
+
+	while (len(segments) > 0):
+		best_point, segments = find_best_point(segments)
+		points.append(best_point)
+
+	return points
 ```
 
 ### 3.5. Maximizing the Number of Prize Places in a Competition
