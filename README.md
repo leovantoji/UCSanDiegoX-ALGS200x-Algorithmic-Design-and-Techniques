@@ -320,6 +320,17 @@ def optimal_points(segments):
 **Output Format:** In the first line, output the maximum number *k* such that *n* can be represented as a sum of *k* pairwise distinct positive integers. In the second line, output *k* pairwise distinct positive integers that sum up to *n* (if there are many such representations, output any of them).
 
 ```python
+def optimal_summands(n):
+	summands = []
+	
+	k = 1
+	while n > 0:
+		if (n - k) > k  or (n == k):
+			summands.append(k)
+			n -= k		
+		k += 1
+
+	return summands
 ```
 
 ### 3.6. Maximizing Your Salary 
