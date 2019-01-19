@@ -6,7 +6,8 @@
   - A choice is called safe when there's an optimal solution consistent with this first choice
   - Not all first choices are safe
   - Greedy choices are often unsafe
-- Divide and Conquer
+- Divide and Conquer:
+  - The run time of linear search is \theta
 
 ## Programming Assignment 2: Algorithmic Warmup
 ### 2.1. Fibonacci Numbers
