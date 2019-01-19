@@ -327,7 +327,7 @@ def optimal_summands(n):
     while n > 0:
         if (n - k) > k  or (n == k):
             summands.append(k)
-            n -= k		
+            n -= k
         k += 1
 
     return summands
@@ -340,5 +340,22 @@ def optimal_summands(n):
 **Output Format:** Output the largest number that can be composed out of *a<sub>1</sub>, a<sub>2</sub> ... a<sub>n</sub>*.
 
 ```python
+def is_greater_or_equal(number, maxNumber):    
+    combo_one = str(number) + str(maxNumber)
+    combo_two = str(maxNumber) + str(number)
+    return int(combo_one) >= int(combo_two)
 
+def largest_number(a):
+    res = ''
+    
+    while len(a) > 0:
+        maxNumber = a[0]
+        for number in a:
+            if is_greater_or_equal(number, maxNumber):
+                maxNumber = number
+        
+        res += maxNumber
+        a.remove(maxNumber)
+        
+    return res
 ```
