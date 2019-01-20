@@ -8,4 +8,6 @@
   - Greedy choices are often unsafe
 - Divide and Conquer:
   - The run time of linear search is θ(*n*), while the run time of binary search is θ(log *n*)
-  - 
+  - Polynomial Multiplication:
+    - Naive: *O(n<sup>2</sup>)*
+    - Faster: *O(n<sup>log<sub>2</sub>3</sup>)*
