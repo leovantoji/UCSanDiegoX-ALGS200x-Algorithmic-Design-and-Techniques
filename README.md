@@ -12,7 +12,7 @@
     - Naive: *O(n<sup>2</sup>)*
     - Faster: *O(n<sup>log<sub>2</sub>3</sup>)*
   - Selection Sort: *O(n<sup>2</sup>)*
-  - Merge Sort: *O(n<sup>log<sub>n</sub>3</sup>)*
+  - Merge Sort: *O(nlog<sub>n</sub>)*
 - Master Theorem: If *T(n) = aT(nb<sup>-1</sup>) + O(n<sup>d</sup>)* for constants *a > 0, b > 1, d ≥ 0)*, then: 
   - *T(n) = O(n<sup>d</sup>)* if *d > log<sub>b</sub>a*
   - *T(n) = O(n<sup>d</sup>* log*n*) if *d = log<sub>b</sub>a*
