@@ -17,7 +17,7 @@
     - Faster: *O(n<sup>log<sub>2</sub>3</sup>)*
   - Selection Sort: *O(n<sup>2</sup>)*
   - Merge Sort: *O(n*log*n)*. Merge sort is asymptotically optimal. Any comparison-based sorting algorithms needs to make at least *n*log*n* operations.
-  - Quick Sort: Assume that all the elements of *A[1 ... n]* are pairwise different. Then the average running time of Randomized Quick Sort is *O(n*log*n)*, while the worst case running time is *O(n<sup>2</sup>)*.
+  - Quick Sort: Assume that all the elements of *A[1 ... n]* are pairwise different. Then the average running time of Randomized Quick Sort is *O(n*log*n)*, while the worst case running time is *O(n<sup>2</sup>)*. Three way partition can be used to tackle array having equal elements.
   - Insertion Sort: 
   - Bubble Sort:
   - Shell Sort: 
