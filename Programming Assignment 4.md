@@ -18,3 +18,13 @@ def binary_search(a, x):
             left = mid + 1
     return -1
 ```
+
+### 4.2. Majority Element
+**Task:** The goal in this code problem is to check whether an input sequence contains a majority element.\
+**Input Format:** The first line of the input contains an integer *n* and a sequence of *n* non-negative integers *a<sub>0</sub>, a<sub>1</sub>, ..., a<sub>n-1</sub>*.\
+**Constraints:** *1 ≤ n ≤ 10<sup>5</sup>*; *0 ≤ a<sub>i</sub> ≤ 10<sup>9</sup>* for all *0 ≤ i < n*.\
+**Output Format:** Output 1 if the sequence contains an element that appears strictly more than *n/2* times, and 0 otherwise.
+
+```python
+
+```
