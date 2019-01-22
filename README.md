@@ -1,7 +1,7 @@
 # UCSanDiegoX-ALGS200x-Algorithmic-Design-and-Techniques
 
 ## Course Summary
-- Big-O, Omega, Theta Notation
+- Big-O, Big-Omega, Big-Theta Notation
 - Greedy Algorithms:
   - A choice is called safe when there's an optimal solution consistent with this first choice
   - Not all first choices are safe
