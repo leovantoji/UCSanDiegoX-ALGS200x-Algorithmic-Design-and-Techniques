@@ -18,3 +18,6 @@
   - Selection Sort: *O(n<sup>2</sup>)*
   - Merge Sort: *O(n*log*n)*. Merge sort is asymptotically optimal. Any comparison-based sorting algorithms needs to make at least *n*log*n* operations.
   - Quick Sort: 
+  - Insertion Sort: 
+  - Bubble Sort:
+  - Shell Sort: 
