@@ -26,5 +26,29 @@ def binary_search(a, x):
 **Output Format:** Output 1 if the sequence contains an element that appears strictly more than *n/2* times, and 0 otherwise.
 
 ```python
+def get_majority_element(a, left, right):
+    if left == right:
+        return -1
+    if left + 1 == right:
+        return a[left]
+    
+    mid = (left + right - 1) // 2 + 1
+    me_left = get_majority_element(a, left, mid)
+    me_right = get_majority_element(a, mid, right)
 
+    count_left = 0
+    count_right = 0
+    for i in range(left, right):
+        if a[i] == me_left:
+            count_left += 1
+        elif a[i] == me_right:
+            count_right += 1
+    
+    n = (right - left) // 2
+    if count_left > n:
+        return me_left
+    elif count_right > n:
+        return me_right
+    
+    return -1
 ```
