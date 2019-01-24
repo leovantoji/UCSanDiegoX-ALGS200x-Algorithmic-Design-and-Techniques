@@ -17,6 +17,39 @@
     - Faster: *O(n<sup>log<sub>2</sub>3</sup>)*
   - Selection Sort: *O(n<sup>2</sup>)*
   - Merge Sort: *O(n*log*n)*. Merge sort is asymptotically optimal. Any comparison-based sorting algorithms needs to make at least *n*log*n* operations.
+  ```python
+  def mergesort(a):
+    n = len(a)
+    if len(a) <= 1:
+        return a
+    
+    mid = n // 2
+    b = mergesort(a[:mid])
+    c = mergesort(a[mid:])
+    d = merge(b,c)
+    return d
+
+def merge(b,c):
+    d = []
+    i = j = 0
+    while i < len(b) and j < len(c):
+        if b[i] <= c[j]:
+            d.append(b[i])
+            i += 1
+        else:
+            d.append(c[j])
+            j += 1
+    
+    while i < len(b):
+        d.append(b[i])
+        i += 1
+    
+    while j < len(c):
+        d.append(c[j])
+        j += 1
+    
+    return d
+  ```
   - Quick Sort: Assume that all the elements of *A[1 ... n]* are pairwise different. Then the average running time of Randomized Quick Sort is *O(n*log*n)*, while the worst case running time is *O(n<sup>2</sup>)*. Three way partition can be used to tackle array having equal elements.
   - Insertion Sort: 
   - Bubble Sort:
