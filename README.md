@@ -29,7 +29,7 @@
     d = merge(b,c)
     return d
 
-def merge(b,c):
+  def merge(b,c):
     d = []
     i = j = 0
     while i < len(b) and j < len(c):
@@ -49,7 +49,7 @@ def merge(b,c):
         j += 1
     
     return d
-  ```
+    ```
   - Quick Sort: Assume that all the elements of *A[1 ... n]* are pairwise different. Then the average running time of Randomized Quick Sort is *O(n*log*n)*, while the worst case running time is *O(n<sup>2</sup>)*. Three way partition can be used to tackle array having equal elements.
   - Insertion Sort: 
   - Bubble Sort:
