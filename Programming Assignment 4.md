@@ -146,10 +146,10 @@ def merge(a, b, left, ave, right):
 ```
 
 ### 4.6. Finding the Closest Pair of Points
-**Task:** Given *n* points on a plane, find the smallest distance between a pair of two (different) points. Recall that the distance between points *(x<sub>1</sub>, y<sub>1</sub>)* and *(x<sub>2</sub>, y<sub>2</sub>)* is equal to sqrt[(*x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (*y<sub>1</sub> - y<sub>2</sub>)<sup>2</sup>*].\
-**Input Format:** The first line contains two non-negative integer *s* and *p* defining the number of segments and the number of points on a line, respectively. The next *s* lines contain two integers *a<sub>i</sub>, b<sub>i</sub>* defining the *i<sup>th</sup>* segment *[a<sub>i</sub>, b<sub>i</sub>]*. The next line contains *p* integers defining points *x<sub>1</sub>, x<sub>2</sub>, ... , x<sub>p</sub>*.\
-**Constraints:** *1 ≤ s, p ≤ 50000*; *-10<sup>8</sup> ≤ a<sub>i</sub> ≤ b<sub>i</sub> ≤ 10<sup>8</sup>* for all *0 ≤ i < s*; *-10<sup>8</sup> ≤ x<sub>j</sub> ≤ 10<sup>8</sup>* for all *0 ≤ j < p*.\
-**Output Format:** Output *p* non-negative integers *k<sub>0</sub>, k<sub>1</sub>, ... , k<sub>p-1</sub>* where *k<sub>i</sub>* is the number of segments which contain *x<sub>i</sub>*.
+**Task:** Given *n* points on a plane, find the smallest distance between a pair of two (different) points. Recall that the distance between points *(x<sub>1</sub>, y<sub>1</sub>)* and *(x<sub>2</sub>, y<sub>2</sub>)* is equal to sqrt[(*x<sub>1</sub> - x<sub>2</sub>)<sup>2</sup> + (y<sub>1</sub> - y<sub>2</sub>)<sup>2</sup>*].\
+**Input Format:** The first line contains the number *n* of points. Each of the following *n* lines defines a point *(x<sub>i</sub>, y<sub>i</sub>)*.\
+**Constraints:** *2 ≤ n ≤ 10<sup>5</sup>*; *-10<sup>9</sup> ≤ x<sub>i</sub>, y<sub>i</sub> ≤ 10<sup>9</sup>* are integers.\
+**Output Format:** Output the minimum distance. The absolute value of the difference between the answer of your program and the optimal value should be at most *10<sup>-3</sup>*. To ensure this, output your answer with at least four digits after the decimal point (otherwise, your answer, while being computed correctly, can turn out to be wrong because of rounding issues).
 
 ```python
 
