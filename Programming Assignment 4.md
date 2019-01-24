@@ -134,3 +134,13 @@ def merge(a, b, left, ave, right):
     
     return number_of_inversions
 ```
+
+### 4.5. Organizing a Lottery
+**Task:** You are given a set of points on a line and a set of segments on a line. The goal is to compute, for each point, the number of segments that contain this point.\
+**Input Format:** The first line contains two non-negative integer *s* and *p* defining the number of segments and the number of points on a line, respectively. The next *s* lines contain two integers *a<sub>i</sub>, b<sub>i</sub>* defining the *i<sup>th</sup>* segment *[a<sub>i</sub>, b<sub>i</sub>]*. The next line contains *p* integers defining points *x<sub>1</xub>, x<sub>2</xub>, ... , x<sub>p</xub>*.\
+**Constraints:** *1 ≤ s, p ≤ 50000*; *-10<sup>8</sup> ≤ a<sub>i</sub> ≤ b<sub>i</sub> ≤ 10<sup>8</sup>* for all *0 ≤ i < s*; *-10<sup>8</sup> ≤ x<sub>j</sub> ≤ 10<sup>8</sup>* for all *0 ≤ j < p*.\
+**Output Format:** Output *p* non-negative integers *k<sub>0</xub>, k<sub>1</xub>, ... , k<sub>p-1</xub>* where *k<sub>i</sub>* is the number of segments which contain *x<sub>i</xub>*.
+
+```python
+
+```
