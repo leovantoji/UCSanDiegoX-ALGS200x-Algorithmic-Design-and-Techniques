@@ -57,7 +57,7 @@ def get_majority_element(a, left, right):
 **Task:** To force the given implementation of the quick sort algorithm to efficiently process sequences with few unique elements, your goal is replace a 2-way partition with a 3-way partition. That is, your new partition procedure should partition the array into 3 parts: *< x* part, *= x* part, and *> x* part.\
 **Input Format:** The first line of the input contains an integer *n* and a sequence of *n* integers *a<sub>0</sub>, a<sub>1</sub>, ..., a<sub>n-1</sub>*.\
 **Constraints:** *1 ≤ n ≤ 10<sup>5</sup>*; *0 ≤ a<sub>i</sub> ≤ 10<sup>9</sup>* for all *0 ≤ i < n*.\
-**Output Format:** Output this sequence sorted in non-decreasing order
+**Output Format:** Output this sequence sorted in non-decreasing order.
 
 ```python
 def partition3(a, l, r):
@@ -85,4 +85,14 @@ def randomized_quick_sort(a, l, r):
     randomized_quick_sort(a, l, m1 - 1)
     randomized_quick_sort(a, m2 + 1, r)
     return a
+```
+
+### 4.4. Number of Inversions
+**Task:** The goal in this problem is to count the number of inversions of a given sequence.\
+**Input Format:** The first line of the input contains an integer *n* and a sequence of *n* integers *a<sub>0</sub>, a<sub>1</sub>, ..., a<sub>n-1</sub>*.\
+**Constraints:** *1 ≤ n ≤ 10<sup>5</sup>*; *0 ≤ a<sub>i</sub> ≤ 10<sup>9</sup>* for all *0 ≤ i < n*.\
+**Output Format:** Output the number of inversions in the sequence.
+
+```python
+
 ```
