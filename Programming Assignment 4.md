@@ -145,12 +145,7 @@ def merge(a, b, left, ave, right):
 import random
 
 def less_than(num1, let1, num2, let2):
-    if num1 < num2:
-        return True
-    elif num1 == num2:
-        if let1 < let2:
-            return True        
-    return False
+    return (num1 < num2) or (num1 == num2 and let1 < let2)
 
 def equal_to(num1, let1, num2, let2):
     return num1 == num2 and let1 == let2
