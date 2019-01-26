@@ -142,7 +142,71 @@ def merge(a, b, left, ave, right):
 **Output Format:** Output *p* non-negative integers *k<sub>0</sub>, k<sub>1</sub>, ... , k<sub>p-1</sub>* where *k<sub>i</sub>* is the number of segments which contain *x<sub>i</sub>*.
 
 ```python
+import random
 
+def less_than(num1, let1, num2, let2):
+    if num1 < num2:
+        return True
+    elif num1 == num2:
+        if let1 < let2:
+            return True        
+    return False
+
+def equal_to(num1, let1, num2, let2):
+    return num1 == num2 and let1 == let2
+
+# modified randomized quick sort 3-way partition such that it will sort (start, end) pairs properly.
+def partition3(a, l, r):
+    x = a[l]
+    j = l # < x starting pos
+    k = l # = x starting pos
+    for i in range(l + 1, r + 1):
+        if less_than(a[i][0], a[i][1], x[0], x[1]):
+            j += 1
+            k += 1
+            a[i], a[k] = a[k], a[i]
+            a[j], a[k] = a[k], a[j]
+        elif equal_to(a[i][0], a[i][1], x[0], x[1]):
+            k += 1
+            a[i], a[k] = a[k], a[i]
+    a[l], a[j] = a[j], a[l]
+    return j, k
+
+def randomized_quick_sort(a, l, r):
+    if l >= r:
+        return a
+    k = random.randint(l, r)
+    a[l], a[k] = a[k], a[l]
+    m1, m2 = partition3(a, l, r)
+    randomized_quick_sort(a, l, m1 - 1)
+    randomized_quick_sort(a, m2 + 1, r)
+    return a
+
+def fast_count_segments(starts, ends, points):
+    cnt = [0] * len(points)
+    
+    if len(points) == 0:
+        return cnt
+    
+    line = [[starts[i],'l',i] for i in range(len(starts))]
+    line += [[points[i],'p',i] for i in range(len(points))]    
+    line += [[ends[i],'r',i] for i in range(len(ends))]
+    
+    # sort line using randomized quick sort
+    line = randomized_quick_sort(line,0,len(line)-1)
+    # line.sort() Much faster run time
+    
+    segments_cnt = 0
+    
+    for pt in line:
+        if pt[1] == 'l':
+            segments_cnt += 1
+        elif pt[1] == 'r':
+            segments_cnt -= 1
+        else:
+            cnt[pt[2]] = segments_cnt
+    
+    return cnt
 ```
 
 ### 4.6. Finding the Closest Pair of Points
