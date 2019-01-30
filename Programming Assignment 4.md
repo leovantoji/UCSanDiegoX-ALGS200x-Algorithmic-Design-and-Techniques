@@ -211,5 +211,74 @@ def fast_count_segments(starts, ends, points):
 **Output Format:** Output the minimum distance. The absolute value of the difference between the answer of your program and the optimal value should be at most *10<sup>-3</sup>*. To ensure this, output your answer with at least four digits after the decimal point (otherwise, your answer, while being computed correctly, can turn out to be wrong because of rounding issues).
 
 ```python
+import math
 
+def distance(x1, y1, x2, y2):
+    return math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+
+def minimum_distance(x, y):
+    # base case
+    if len(x) == 2:
+        return distance(x[0], y[0], x[1], y[1])
+    if len(x) == 3:
+        return min(distance(x[0], y[0], x[1], y[1]), distance(x[0], y[0], x[2], y[2]), distance(x[2], y[2], x[1], y[1]))
+    
+    '''# sort points by their x coordinate
+    points = list(zip(x, y))
+    points.sort()
+    x = [points[i][0] for i in range(len(points))]
+    y = [points[i][1] for i in range(len(points))]'''
+    
+    # split the sorted list into two halves
+    n = len(x)
+    mid = n // 2
+    s1_x = x[:mid]
+    s1_y = y[:mid]
+    s2_x = x[mid:]
+    s2_y = y[mid:]
+    
+    # find minimum distance for each of the two halves
+    d1 = minimum_distance(s1_x, s1_y)
+    d2 = minimum_distance(s2_x, s2_y)
+    d = min(d1, d2)
+    
+    # middle line
+    x_mid_line = x[mid]
+    if mid % 2 != 0:
+        x_mid_line = (x[mid] + x[mid+1])/2
+    
+    # remove all points from s1 and s2 whose x-distance to the middle line is greater than d. Put all remaining points into P
+    P = []
+    i = len(s1_x) - 1
+    while i >= 0:
+        if x_mid_line - s1_x[i] <= d:
+            P.append((s1_x[i], s1_y[i]))
+            i -= 1
+        else:
+            break
+
+    i = 0
+    while i < len(s2_x):
+        if s2_x[i] - x_mid_line <= d:
+            P.append((s2_x[i], s2_y[i]))
+            i += 1
+        else:
+            break
+    
+    # sort P by y-coordinate
+    P.sort(key = lambda p: p[1])
+    
+    # find d'
+    i = 0
+    d_prime = d
+    while i < len(P) - 1:
+        j = i + 1
+        while j - i <= 7 and j < len(P) and (P[j][1] - P[i][1]) < d_prime:
+            d0 = distance(P[i][0], P[i][1], P[j][0], P[j][1])
+            if d0 < d_prime:
+                d_prime = d0
+            j += 1
+        i += 1
+    
+    return min(d, d_prime)
 ```
