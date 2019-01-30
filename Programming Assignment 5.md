@@ -28,5 +28,31 @@ def get_change(m):
 **Output Format:** In the first line, output the minimum number *k* operations needed to get *n* from 1. In the second line output a sequence of intermediate numbers. That is, the second line should contain positive integers *a<sub>0</sub>, a<sub>1</sub>, ..., a<sub>k-1</sub>* such that *a<sub>0</sub> = 1, a<sub>k-1</sub> = n* and for all *0 ≤ i ≤ k-1, a<sub>i+1</sub>* is equal to either *a<sub>i</sub> + 1, 2a<sub>i</sub>* or *3a<sub>i</sub>*. If there are many such sequences, output any one of them.
 
 ```python
+import math
 
+def optimal_sequence(n):
+    min_operations = [[0,[]] for i in range(n+1)]
+    min_operations[1][1].append(1)
+    
+    for number in range(2,n+1):
+        min_operations[number][0] = math.inf
+        
+        operations = [1]
+        if number % 2 == 0:
+            operations.append(number // 2)
+        
+        if number % 3 == 0:
+            operations.append(2 * (number // 3))
+        
+        for o in operations:
+            if number >= o:
+                numOperations = min_operations[number-o][0] + 1
+                sequence = [i for i in min_operations[number-o][1]]
+                sequence.append(number)
+                                
+                if numOperations < min_operations[number][0]:
+                    min_operations[number][0] = numOperations
+                    min_operations[number][1] = sequence
+                    
+    return min_operations[n][1]
 ```
