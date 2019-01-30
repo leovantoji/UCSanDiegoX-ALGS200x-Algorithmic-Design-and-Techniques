@@ -223,11 +223,12 @@ def minimum_distance(x, y):
     if len(x) == 3:
         return min(distance(x[0], y[0], x[1], y[1]), distance(x[0], y[0], x[2], y[2]), distance(x[2], y[2], x[1], y[1]))
     
-    '''# sort points by their x coordinate
+    # can improve the running time by sorting once in __main__
+    # sort points by their x coordinate
     points = list(zip(x, y))
     points.sort()
     x = [points[i][0] for i in range(len(points))]
-    y = [points[i][1] for i in range(len(points))]'''
+    y = [points[i][1] for i in range(len(points))]
     
     # split the sorted list into two halves
     n = len(x)
@@ -281,4 +282,22 @@ def minimum_distance(x, y):
         i += 1
     
     return min(d, d_prime)
+
+if __name__ == '__main__':
+    input = sys.stdin.read()
+    data = list(map(int, input.split()))
+    n = data[0]
+    x = data[1::2]
+    y = data[2::2]
+    
+    '''# sort points by their x-coordinate
+    points = list(zip(x, y))
+    points.sort()
+    x = []
+    y = []
+    for i in range(len(points)):
+        x.append(points[i][0])
+        y.append(points[i][1])'''
+    
+    print("{0:.9f}".format(minimum_distance(x, y)))
 ```
