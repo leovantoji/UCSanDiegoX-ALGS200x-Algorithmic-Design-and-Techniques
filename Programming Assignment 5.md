@@ -56,3 +56,13 @@ def optimal_sequence(n):
                     
     return min_operations[n][1]
 ```
+
+### 5.3. Computing The Edit Distance Between Two Strings
+**Task:** The goal of this problem is to implement the algorithm for computing the edit distance between twostrings.\
+**Input Format:** Each of the two lines of the input contains a string consisting of lower case latin letters.\
+**Contraints:** The length of both strings is at least *1* and at most *100*.\
+**Output Format:** Output the edit distance between the given two strings.
+
+```python
+
+```
