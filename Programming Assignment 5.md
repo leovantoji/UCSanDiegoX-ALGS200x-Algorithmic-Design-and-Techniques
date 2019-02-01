@@ -125,5 +125,29 @@ def lcs2(a, b):
 **Output Format:** Output *p*.
 
 ```python
+def lcs3(a, b, c):
+    n = len(a)
+    m = len(b)
+    l = len(c)
+    
+    # initiate distance matrix
+    d = [[[0 for k in range(l+1)] for j in range(m+1)] for i in range(n+1)]
+    
+    # calculate distance matrix
+    for i in range(1,n+1):
+        for j in range(1,m+1):
+            for k in range(1,l+1):
+                D1 = d[i][j-1][k-1] # indel
+                D2 = d[i-1][j][k-1] # indel
+                D3 = d[i-1][j-1][k] # indel
+                D4 = d[i-1][j][k] # indel
+                D5 = d[i][j-1][k] # indel
+                D6 = d[i][j][k-1] # indel
+                D7 = d[i-1][j-1][k-1] #mismatch
 
+                if a[i-1] == b[j-1] == c[k-1]:
+                    D7 = d[i-1][j-1][k-1] + 1 #match
+                d[i][j][k] = max(D1,D2,D3,D4,D5,D6,D7)
+    
+    return d[n][m][l]
 ```
