@@ -120,8 +120,8 @@ def lcs2(a, b):
 
 ### 5.5. Longest Common Subsequence of Three Sequences
 **Task:** Given two sequences *A = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>), B = (b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>m</sub>)* and C = (c<sub>1</sub>, c<sub>2</sub>, ..., c<sub>l</sub>)*, find the length of their longest common subsequence, i.e., the largest non-negative integer *p* such that there exist indices *1 ≤ i<sub>1</sub> < i<sub>2</sub> < ··· < i<sub>p</sub> ≤ n, 1 ≤ j<sub>1</sub> < j<sub>2</sub> < ··· < j<sub>p</sub> ≤ m* and *1 ≤ k<sub>1</sub> < k<sub>2</sub> < ··· < k<sub>p</sub> ≤ l*, such that *a<sub>i<sub>1</sub></sub> = b<sub>j<sub>1</sub></sub> = c<sub>k<sub>1</sub></sub>, ..., a<sub>i<sub>p</sub></sub> = b<sub>j<sub>p</sub></sub> = c<sub>k<sub>p</sub></sub>*.\
-**Input Format:** First line: *n*. Second line: *a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>*. Third line: *m*. Fourth line: *b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>m</sub>*.\
-**Contraints:** *1 ≤ n, m ≤ 100*; *−10<sup>9</sup> < a<sub>i</sub>, b<sub>i</sub> <10<sup>9</sup>*.\
+**Input Format:** First line: *n*. Second line: *a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>*. Third line: *m*. Fourth line: *b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>m</sub>*. Fifth line: *l*. Sixth line: *c<sub>1</sub>, c<sub>2</sub>, ..., c<sub>l</sub>*.\
+**Contraints:** *1 ≤ n, m, l ≤ 100*; *−10<sup>9</sup> < a<sub>i</sub>, b<sub>i</sub>, c<sub>i</sub> <10<sup>9</sup>*.\
 **Output Format:** Output *p*.
 
 ```python
