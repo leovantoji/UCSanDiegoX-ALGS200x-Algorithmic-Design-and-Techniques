@@ -64,5 +64,38 @@ def optimal_sequence(n):
 **Output Format:** Output the edit distance between the given two strings.
 
 ```python
+def edit_distance(s, t):
+    m = len(s)
+    n = len(t)
+    
+    # initiate distance matrix
+    d = [[0 for j in range(n+1)] for i in range(m+1)]
+    for i in range(m+1):
+        d[i][0] = i
+        
+    for j in range(n+1):
+        d[0][j] = j
+    
+    # calculate distance matrix
+    for i in range(1,m+1):
+        for j in range(1,n+1):
+            D1 = d[i-1][j] + 1 #insertion
+            D2 = d[i][j-1] + 1 #deletion
+            D3 = d[i-1][j-1] #match
+            
+            if s[i-1] != t[j-1]:
+                D3 = d[i-1][j-1] + 1 #mismatch
+            d[i][j] = min(D1,D2,D3)
+    
+    return d[m][n]
+```
+
+### 5.4. Longest Common Subsequence of Two Sequences
+**Task:** Given two sequences *A = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>)* and *B = (b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>m</sub>)*, find the length of their longest common subsequence, i.e., the largest non-negative integer *p* such that there exist indices *1 ≤ i<sub>1</sub> < i<sub>2</sub> < ··· < i<sub>p</sub> ≤ n* and *1 ≤ j<sub>1</sub> < j<sub>2</sub> < ··· < j<sub>p</sub> ≤ m*, such that *a<sub>i<sub>1</sub></sub> = b<sub>j<sub>1</sub></sub>, ..., a<sub>i<sub>p</sub></sub> = b<sub>j<sub>p</sub></sub>*.\
+**Input Format:** Each of the two lines of the input contains a string consisting of lower case latin letters.\
+**Contraints:** The length of both strings is at least *1* and at most *100*.\
+**Output Format:** Output *p*.
+
+```python
 
 ```
