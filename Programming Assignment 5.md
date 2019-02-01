@@ -92,8 +92,8 @@ def edit_distance(s, t):
 
 ### 5.4. Longest Common Subsequence of Two Sequences
 **Task:** Given two sequences *A = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>)* and *B = (b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>m</sub>)*, find the length of their longest common subsequence, i.e., the largest non-negative integer *p* such that there exist indices *1 ≤ i<sub>1</sub> < i<sub>2</sub> < ··· < i<sub>p</sub> ≤ n* and *1 ≤ j<sub>1</sub> < j<sub>2</sub> < ··· < j<sub>p</sub> ≤ m*, such that *a<sub>i<sub>1</sub></sub> = b<sub>j<sub>1</sub></sub>, ..., a<sub>i<sub>p</sub></sub> = b<sub>j<sub>p</sub></sub>*.\
-**Input Format:** Each of the two lines of the input contains a string consisting of lower case latin letters.\
-**Contraints:** The length of both strings is at least *1* and at most *100*.\
+**Input Format:** First line: *n*. Second line: *a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>*. Third line: *m*. Fourth line: *b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>m</sub>*.\
+**Contraints:** *1 ≤ n, m ≤ 100*; *−10<sup>9</sup> < a<sub>i</sub>, b<sub>i</sub> <10<sup>9</sup>*.\
 **Output Format:** Output *p*.
 
 ```python
