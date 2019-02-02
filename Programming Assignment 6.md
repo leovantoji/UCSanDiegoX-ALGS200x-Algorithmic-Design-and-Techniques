@@ -29,6 +29,34 @@ def optimal_weight(W, w):
 **Output Format:** Output *1*, if it possible to partition *v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>n</sub>* into three subsets with equal sums, and *0* otherwise.
 
 ```python
+# Dynamic Programming
+def partition3(A):
+    n = len(A)
+    sum = 0
+    
+    for i in range(n): 
+        sum += A[i]
+    
+    if sum % 3 != 0: 
+        return 0
+      
+    part = [[1 for j in range(n + 1)] for i in range(sum // 3 + 1)] 
+
+    for i in range(0, n + 1): 
+        part[0][i] = 1
+
+    for i in range(1, sum // 3 + 1): 
+        part[i][0] = 0
+    
+    for i in range(1, sum // 3 + 1):     
+        for j in range(1, n + 1): 
+            part[i][j] = part[i][j - 1]          
+            if i >= A[j - 1]: 
+                part[i][j] = max(part[i][j], part[i - A[j - 1]][j - 1]) 
+    
+    return part[sum // 3][n]
+
+# Brute force
 import itertools
 
 def partition3(A):
