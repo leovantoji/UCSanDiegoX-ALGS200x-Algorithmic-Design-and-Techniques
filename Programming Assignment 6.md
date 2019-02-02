@@ -48,3 +48,46 @@ def partition3(A):
 **Input Format:** The only line of the input contains a string *s* of length 2*n* + 1 for some *n*, with symbol s<sub>0</sub>, s<sub>1</sub>, ..., s<sub>2n</sub>. Each symbol at an even position of *s* is a digit (that is, an integer from 0 to 9) while each symbol at an odd position is one of three operations from {+,-,\*}.\
 **Constraints:** *1 ≤ n ≤ 14* (hence the string contains at most *29* symbols).\
 **Output Format:** Output the maximum possible value of the given arithmetic expression among different orders of applying arithmetic operations.
+
+```python
+import math
+
+def evalt(a, b, op):
+    if op == '+':
+        return a + b
+    elif op == '-':
+        return a - b
+    elif op == '*':
+        return a * b
+    else:
+        assert False
+
+def get_maximum_value(dataset):
+    n = (len(dataset) - 1) // 2
+    m = [[math.inf for j in range(n+1)] for i in range(n+1)]
+    M = [[-math.inf for j in range(n+1)] for i in range(n+1)]
+    
+    for i in range(n+1):
+        m[i][i] = M[i][i] = int(dataset[i*2])
+    
+    def min_max(i,j):
+        minimum = math.inf
+        maximum = -math.inf
+
+        for k in range(i,j):
+            a = evalt(M[i][k],M[k+1][j],dataset[2*k+1])
+            b = evalt(M[i][k],m[k+1][j],dataset[2*k+1])
+            c = evalt(m[i][k],M[k+1][j],dataset[2*k+1])
+            d = evalt(m[i][k],m[k+1][j],dataset[2*k+1])
+            minimum = min(minimum,a,b,c,d)
+            maximum = max(maximum,a,b,c,d)
+    
+        return minimum, maximum
+    
+    for s in range(1,n+1):
+        for i in range(0,n-s+1):
+            j = i + s
+            m[i][j], M[i][j] = min_max(i,j)
+    
+    return M[0][n]
+```
